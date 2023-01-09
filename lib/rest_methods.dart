@@ -17,7 +17,6 @@ class Rest {
   // --------------------
   ///
   static Future<http.Response> postMap({
-    @required BuildContext context,
     @required Map<String, dynamic> map,
     @required String rawLink,
     @required bool showErrorDialog,
@@ -44,12 +43,7 @@ class Rest {
 
     );
 
-    return _checkUpResponse(
-      context: context,
-      response: _response,
-      invoker: invoker,
-    );
-
+    return _response;
   }
   // -----------------------------------------------------------------------------
 
@@ -69,8 +63,6 @@ class Rest {
     http.Response _response;
 
     try {
-
-      // blog('rest.get : _imageUri : $rawLink');
 
       /// GET REQUEST
       _response = await http.get(
@@ -98,17 +90,12 @@ class Rest {
       // final response = await request.close().timeout(const Duration(seconds: 10));
     // }
 
-    return _checkUpResponse(
-      context: context,
-      response: _response,
-      invoker: invoker,
-    );
+    return _response;
 
   }
   // --------------------
   ///
   static Future<Uint8List> readBytes({
-    // @required BuildContext context,
     @required String rawLink,
     String invoker = '',
     int timeoutSeconds = 2,
@@ -150,7 +137,6 @@ class Rest {
   // --------------------
   ///
   static Future<http.Response> patchMap({
-    @required BuildContext context,
     @required Map<String, dynamic> input,
     @required String rawLink,
     Map<String, String> headers,
@@ -176,12 +162,7 @@ class Rest {
 
     );
 
-    return _checkUpResponse(
-      context: context,
-      response: _response,
-      invoker: invoker,
-    );
-
+    return _response;
   }
   // -----------------------------------------------------------------------------
 
@@ -190,7 +171,6 @@ class Rest {
   // --------------------
   ///
   static Future<http.Response> delete({
-    @required BuildContext context,
     @required String rawLink,
     Object body,
     Map<String, String> headers,
@@ -216,11 +196,7 @@ class Rest {
 
     );
 
-    return _checkUpResponse(
-      context: context,
-      response: _response,
-      invoker: invoker,
-    );
+    return _response;
 
   }
   // -----------------------------------------------------------------------------
@@ -228,11 +204,12 @@ class Rest {
   /// ERROR HANDLING
 
   // --------------------
+  /*
   /// TESTED : WORKS PERFECT
   static Future<http.Response> _checkUpResponse({
-    @required BuildContext context,
     @required http.Response response,
     @required String invoker,
+    Function(http.Response response) onError,
   }) async {
 
     http.Response _output;
@@ -251,11 +228,9 @@ class Rest {
 
       else if (response.statusCode >= 400){
 
-        await  _onHttpError(
-          context: context,
-          error: response.body,
-          invoker: invoker,
-        );
+        if (onError != null){
+          onError(response);
+        }
 
       }
 
@@ -263,7 +238,9 @@ class Rest {
 
     return _output;
   }
+   */
   // --------------------
+  /*
   /// TESTED : WORKS PERFECT
   static Future<void> _onHttpError({
     @required BuildContext context,
@@ -274,5 +251,6 @@ class Rest {
     blog('onHttpError : $invoker : error : $error');
 
   }
+   */
   // -----------------------------------------------------------------------------
 }
