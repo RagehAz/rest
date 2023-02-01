@@ -1,6 +1,6 @@
 name: rest
 description: Rest API methods
-version: 0.0.3
+version: 0.0.4
 publish_to: none
 homepage: https://github.com/RagehAz/rest.git
 
@@ -17,6 +17,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  lint: ^1.0.0
 
 flutter:

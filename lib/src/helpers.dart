@@ -82,16 +82,16 @@ void blogFlutterErrorDetails(FlutterErrorDetails details){
 
   if (details != null){
 
-    blog('details.exception.toString() :  ${details.exception.toString()}');
-    blog('details.stack.toString() :      ${details.stack.toString()}');
+    blog('details.exception :             ${details.exception}');
+    blog('details.stack :                 ${details.stack}');
     blog('details.library :               ${details.library}');
     blog('details.context.name :          ${details.context.name}');
     blog('details.context.style :         ${details.context.style}');
     blog('details.context.showName :      ${details.context.showName}');
     blog('details.context.showSeparator : ${details.context.showSeparator}');
     blog('details.context.linePrefix :    ${details.context.linePrefix}');
-    blog('details.stackFilter :           ${details.stackFilter.toString()}');
-    blog('details.informationCollector :  ${details.informationCollector.toString()}');
+    blog('details.stackFilter :           ${details.stackFilter}');
+    blog('details.informationCollector :  ${details.informationCollector}');
     blog('details.silent :                ${details.silent}');
 
   }

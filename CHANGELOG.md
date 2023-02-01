@@ -1,3 +1,8 @@
+## 0.0.4
+
+* Architectural adjustments
+
+
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Separated Rest Class fromBldrs_app

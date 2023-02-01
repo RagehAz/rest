@@ -2,10 +2,11 @@ import 'dart:convert';
 import 'dart:typed_data';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
-import 'package:rest/rest_methods.dart';
+import 'package:rest/rest.dart';
 
 /// AI GENERATED : BUT NOT TESTED : NEED VALID URL LINK TO TEST
 void main() {
+
   test('test postMap method', () async {
     // Setup
     final map = {'key': 'value'};
