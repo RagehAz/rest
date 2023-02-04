@@ -14,7 +14,6 @@ class Rest {
   static Future<http.Response> postMap({
     @required Map<String, dynamic> map,
     @required String rawLink,
-    @required bool showErrorDialog,
     Map<String, String> headers,
     Encoding encoding,
     String invoker = '',
@@ -49,7 +48,6 @@ class Rest {
   static Future<http.Response> get({
     @required BuildContext context,
     @required String rawLink,
-    @required bool showErrorDialog,
     @required String invoker,
     Map<String, String> headers,
     int timeoutSeconds = 10,

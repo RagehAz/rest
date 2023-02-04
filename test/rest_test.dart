@@ -11,7 +11,6 @@ void main() {
     // Setup
     final map = {'key': 'value'};
     const rawLink = 'https://www.example.com';
-    const showErrorDialog = false;
     final headers = {'headerKey': 'headerValue'};
     final encoding = Encoding.getByName('utf-8');
     const invoker = 'test';
@@ -20,7 +19,6 @@ void main() {
     final response = await Rest.postMap(
       map: map,
       rawLink: rawLink,
-      showErrorDialog: showErrorDialog,
       headers: headers,
       encoding: encoding,
       invoker: invoker,
@@ -34,7 +32,6 @@ void main() {
     // Setup
     const context = null;
     const rawLink = 'https://www.example.com';
-    const showErrorDialog = false;
     const invoker = 'test';
     final headers = {'headerKey': 'headerValue'};
     // const timeoutSeconds = 10;
@@ -43,7 +40,6 @@ void main() {
     final response = await Rest.get(
       context: context,
       rawLink: rawLink,
-      showErrorDialog: showErrorDialog,
       invoker: invoker,
       headers: headers,
       // timeoutSeconds: timeoutSeconds,
