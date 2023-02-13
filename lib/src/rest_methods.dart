@@ -46,7 +46,6 @@ class Rest {
   // --------------------
   /// TESTED : WORKS PERFECT
   static Future<http.Response> get({
-    @required BuildContext context,
     @required String rawLink,
     @required String invoker,
     Map<String, String> headers,

@@ -30,7 +30,6 @@ void main() {
 
   test('test get method', () async {
     // Setup
-    const context = null;
     const rawLink = 'https://www.example.com';
     const invoker = 'test';
     final headers = {'headerKey': 'headerValue'};
@@ -38,7 +37,6 @@ void main() {
 
     // Call method
     final response = await Rest.get(
-      context: context,
       rawLink: rawLink,
       invoker: invoker,
       headers: headers,
