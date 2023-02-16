@@ -193,6 +193,48 @@ class Rest {
   }
   // -----------------------------------------------------------------------------
 
+  /// BLOG
+
+  // --------------------
+  /// TESTED : WORKS PERFECT
+  static void blogURI({
+    @required Uri uri,
+    String invoker = ':',
+  }){
+
+    if (uri == null){
+      blog('blogURI $invoker : uri is null');
+    }
+    else {
+      blog('blogURI $invoker : uri : $uri');
+      blog('blogURI $invoker : uri.toString : $uri');
+      blog('blogURI $invoker : uri.path : ${uri?.path}');
+      blog('blogURI $invoker : uri.hashCode : ${uri?.hashCode}');
+      blog('blogURI $invoker : uri.data : ${uri?.data}');
+      blog('blogURI $invoker : uri.queryParameters : ${uri?.queryParameters}');
+      blog('blogURI $invoker : uri.authority : ${uri?.authority}');
+      blog('blogURI $invoker : uri.fragment : ${uri?.fragment}');
+      blog('blogURI $invoker : uri.hasAbsolutePath : ${uri?.hasAbsolutePath}');
+      blog('blogURI $invoker : uri.hasAuthority : ${uri?.hasAuthority}');
+      blog('blogURI $invoker : uri.hasEmptyPath : ${uri?.hasEmptyPath}');
+      blog('blogURI $invoker : uri.hasFragment : ${uri?.hasFragment}');
+      blog('blogURI $invoker : uri.hasPort : ${uri?.hasPort}');
+      blog('blogURI $invoker : uri.hasQuery : ${uri?.hasQuery}');
+      blog('blogURI $invoker : uri.hasScheme : ${uri?.hasScheme}');
+      blog('blogURI $invoker : uri.query : ${uri?.query}');
+      blog('blogURI $invoker : uri.host : ${uri?.host}');
+      blog('blogURI $invoker : uri.isAbsolute : ${uri?.isAbsolute}');
+      blog('blogURI $invoker : uri.pathSegments : ${uri?.pathSegments}');
+      blog('blogURI $invoker : uri.port : ${uri?.port}');
+      blog('blogURI $invoker : uri.scheme : ${uri?.scheme}');
+      blog('blogURI $invoker : uri.userInfo : ${uri?.userInfo}');
+      blog('blogURI $invoker : uri.queryParametersAll : ${uri?.queryParametersAll}');
+      // blog('blogURI $invoker : link.origin : ${uri?.origin}'); // Unhandled Exception: Bad state: Origin is only applicable schemes http and https:
+    }
+
+  }
+  // -----------------------------------------------------------------------------
+
   /// ERROR HANDLING
 
   // --------------------
