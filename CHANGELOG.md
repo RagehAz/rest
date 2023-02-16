@@ -1,5 +1,6 @@
 ---
 
+## 0.0.8 : Added blogResponse
 ## 0.0.7 : Added BlogURI
 ## 0.0.6 : Cleaned Contexts
 ## 0.0.4 : Architectural adjustments
