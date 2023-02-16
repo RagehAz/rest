@@ -233,6 +233,30 @@ class Rest {
     }
 
   }
+  // --------------------
+  /// TESTED : WORKS PERFECT
+  static void blogResponse({
+    @required http.Response response,
+  }){
+
+     if (response == null){
+       blog('blogResponse : response in null');
+     }
+     else {
+
+       blog('response.body : ${response.body}');
+       blog('response.bodyBytes.length : ${response.bodyBytes.length}');
+       blog('response.statusCode : ${response.statusCode}');
+       blog('response.request : ${response.request}');
+       blog('response.headers : ${response.headers}');
+       blog('response.isRedirect : ${response.isRedirect}');
+       blog('response.persistentConnection : ${response.persistentConnection}');
+       blog('response.reasonPhrase : ${response.reasonPhrase}');
+       blog('response.contentLength : ${response.contentLength}');
+
+     }
+
+  }
   // -----------------------------------------------------------------------------
 
   /// ERROR HANDLING

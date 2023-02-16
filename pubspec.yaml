@@ -14,6 +14,10 @@ dependencies:
 
   http: ^0.13.4
 
+  filers:
+    git:
+      url: https://github.com/RagehAz/filers.git
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
